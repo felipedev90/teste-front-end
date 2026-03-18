@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Product } from "./types/Product";
+import Header from "./components/Header/Header";
 import fetchProducts from "./services/productFetch";
 import ProductModal from "./components/ProductModal/ProductModal";
 import ProductShowcase from "./components/ProductShowcase/ProductShowcase";
@@ -31,6 +32,8 @@ export default function App() {
 
   return (
     <>
+      <Header />
+
       <ProductShowcase
         products={products}
         tabs={tabItems}

@@ -1,0 +1,121 @@
+@use "../../styles/variables" as *;
+
+.product-showcase {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: $spacing-xl $spacing-md;
+  font-family: $font-family-primary;
+
+  &__header {
+    text-align: center;
+    margin-bottom: $spacing-sm;
+  }
+
+  &__title {
+    font-size: $font-lg;
+    font-weight: $font-weight-bold;
+    color: $color-primary;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: $spacing-xs;
+
+    &::before,
+    &::after {
+      content: "";
+      flex: 1;
+      height: 0.0625rem;
+      background-color: $color-lines;
+      margin: 0 $spacing-md;
+      max-width: 360px;
+
+      transform: translateY(-8px);
+    }
+  }
+
+  &__tabs {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    text-transform: uppercase;
+    border: 0.0625rem solid $color-lines-tab;
+    overflow: hidden;
+  }
+
+  &__tab-item {
+    padding: $spacing-xs $spacing-sm;
+    font-size: $font-sm;
+    font-weight: $font-weight-regular;
+    color: $color-text-tab;
+    cursor: pointer;
+    border-right: 0.0625rem solid $color-lines-tab;
+    flex: 1;
+    text-align: center;
+
+    &:last-child {
+      border-right: none;
+    }
+
+    &--active {
+      color: $color-primary;
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  &__view-all {
+    font-size: $font-sm;
+    color: $text-primary-color;
+    text-decoration: none;
+    font-weight: $font-weight-bold;
+    display: inline-block;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__grid {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  &__product-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: $spacing-lg;
+    padding: $spacing-md;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  &__arrow {
+    font-size: $font-md;
+    background: $color-surface;
+    border: none;
+    box-shadow: $shadow-card;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    z-index: 10;
+    color: $color-text-main;
+    font-weight: $font-weight-light;
+
+    &--prev {
+      left: -30px;
+    }
+
+    &--next {
+      right: -30px;
+    }
+  }
+}

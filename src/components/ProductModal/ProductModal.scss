@@ -1,0 +1,155 @@
+@use "../../styles/variables" as *;
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  position: relative;
+  background-color: $color-surface;
+  border: none;
+  border-radius: $border-radius-sm;
+  padding: $spacing-xl;
+  width: 90%;
+  max-width: 769px;
+  box-shadow: $shadow-card;
+
+  &__close {
+    position: absolute;
+    top: $spacing-sm;
+    right: $spacing-lg;
+    background: none;
+    border: none;
+    font-size: $font-sm;
+    color: $text-secondary-color;
+    cursor: pointer;
+  }
+
+  &__content {
+    display: flex;
+    gap: $spacing-xl;
+    align-items: stretch;
+  }
+
+  &__image-wrapper {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__image {
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin-top: $spacing-md;
+  }
+
+  &__title {
+    font-family: $font-family-primary;
+    font-size: $font-md;
+    font-weight: $font-weight-regular;
+    color: $text-primary-color;
+    text-transform: uppercase;
+  }
+
+  &__price {
+    font-family: $font-family-primary;
+    font-size: $font-md;
+    font-weight: $font-weight-semi-bold;
+    color: $text-primary-color;
+
+    letter-spacing: 0.12rem;
+  }
+
+  &__description {
+    font-family: $font-family-primary;
+    font-size: $font-xxs;
+    font-weight: $font-weight-regular;
+    color: $text-secondary-color;
+    margin: $spacing-md 0;
+  }
+
+  &__link {
+    font-family: $font-family-primary;
+    font-size: $font-xxs;
+    font-weight: $font-weight-regular;
+    color: $color-primary;
+    text-decoration: none;
+    margin-bottom: $spacing-md;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    gap: $spacing-md;
+    align-items: center;
+  }
+
+  &__quantity {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid $color-lines;
+    border-radius: $border-radius-sm;
+    padding: 0 $spacing-xs;
+    width: 110px;
+    height: 36px;
+  }
+
+  &__quantity-btn {
+    background: none;
+    border: none;
+    font-size: $font-md;
+    color: $bg-secondary-color;
+    cursor: pointer;
+    padding: 0 $spacing-xs;
+  }
+
+  &__quantity-btn--disabled {
+    color: $color-text-muted;
+    font-size: $font-md;
+    cursor: not-allowed;
+  }
+
+  &__quantity-value {
+    font-family: $font-family-primary;
+    font-size: $font-sm;
+    font-weight: $font-weight-regular;
+    color: $bg-secondary-color;
+  }
+
+  &__buy-btn {
+    flex: 1;
+    background-color: $bg-tertiary-color;
+    border: none;
+    border-radius: $border-radius-sm;
+    height: $spacing-2xl;
+    color: $bg-secondary-color;
+    font-family: $font-family-primary;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}

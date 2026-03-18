@@ -1,0 +1,55 @@
+/* FONTS */
+$font-family-primary: "Poppins", sans-serif;
+
+/* PESO DA FONTE */
+$font-weight-bold: 700;
+$font-weight-semi-bold: 600;
+$font-weight-regular: 400;
+$font-weight-light: 300;
+
+/* TAMANHO DAS FONTES - px / 16 = rem */
+$font-3xl: 3rem;
+$font-2xl: 2.5rem;
+$font-xl: 2rem;
+$font-lg: 1.87rem;
+$font-md: 1.25rem;
+$font-sm: 0.93rem;
+$font-xs: 0.75rem;
+$font-xxs: 0.62rem;
+
+/* CORES */
+$color-surface: #ffffff;
+$color-primary: #3442b5;
+$color-text-main: #000000;
+$color-text-muted: #808080;
+$color-border: #b1b1b1;
+$bg-secondary-color: #271c47;
+$bg-tertiary-color: #f7ca11;
+
+$text-primary-color: #3f3f40;
+$text-secondary-color: #9f9f9f;
+
+/* CORES DO TAB */
+$color-lines: #dedede;
+$color-lines-tab: #bdbdbd;
+$color-text-tab: #3b3b3b;
+
+/* ESPAÇAMENTOS*/
+$card-width: 304px;
+$card-height: 500px;
+$spacing-3xl: 3rem;
+$spacing-2xl: 2.25rem;
+$spacing-xl: 2rem;
+$spacing-lg: 1.5rem;
+$spacing-md: 1rem;
+$spacing-sm: 0.75rem;
+$spacing-xs: 0.5rem;
+
+/* SOMBRAS */
+$shadow-text: 0px 4px 4px rgba(0, 0, 0, 0.25);
+$shadow-line: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+$shadow-card: 0px 3px 19px 0px rgba(0, 0, 0, 0.22);
+
+/* BORDAS */
+$border-radius-md: 0.62rem;
+$border-radius-sm: 0.25rem;

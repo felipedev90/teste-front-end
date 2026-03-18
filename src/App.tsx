@@ -4,6 +4,15 @@ import fetchProducts from "./services/productFetch";
 import ProductModal from "./components/ProductModal/ProductModal";
 import ProductShowcase from "./components/ProductShowcase/ProductShowcase";
 
+const tabItems = [
+  "Celular",
+  "Acessórios",
+  "Tablets",
+  "Notebooks",
+  "Tvs",
+  "Ver todos",
+];
+
 export default function App() {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [products, setProducts] = useState<Product[]>([]);
@@ -22,7 +31,16 @@ export default function App() {
 
   return (
     <>
+      <ProductShowcase
+        products={products}
+        tabs={tabItems}
+        onSetProduct={setSelectedProduct}
+      />
+
       <ProductShowcase products={products} onSetProduct={setSelectedProduct} />
+
+      <ProductShowcase products={products} onSetProduct={setSelectedProduct} />
+
       {selectedProduct && (
         <ProductModal
           product={selectedProduct}

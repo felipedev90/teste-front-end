@@ -18,19 +18,24 @@ export default function Header() {
         <div className="header__top-item">
           <img src={ShieldCheck} alt="Segurança" />
           <span>
-            Compra <strong>100% segura</strong>
+            Compra{" "}
+            <strong className="header__top-item--highlight">100% segura</strong>
           </span>
         </div>
         <div className="header__top-item">
           <img src={Truck} alt="Frete" />
           <span>
-            <strong>Frete grátis</strong> acima de R$ 200
+            <strong className="header__top-item--highlight">
+              Frete grátis
+            </strong>{" "}
+            acima de R$ 200
           </span>
         </div>
         <div className="header__top-item">
           <img src={CreditCard} alt="Parcelamento" />
           <span>
-            <strong>Parcele</strong> suas compras
+            <strong className="header__top-item--highlight">Parcele</strong>{" "}
+            suas compras
           </span>
         </div>
       </div>
@@ -84,7 +89,7 @@ export default function Header() {
           <li className="header__nav-item">
             <a href="#">LANÇAMENTOS</a>
           </li>
-          <li className="header__nav-item--active">
+          <li className="header__nav-item header__nav-item--active">
             <a href="#">OFERTAS DO DIA</a>
           </li>
           <li className="header__nav-item">

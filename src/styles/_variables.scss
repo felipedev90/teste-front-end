@@ -34,9 +34,13 @@ $color-lines: #dedede;
 $color-lines-tab: #bdbdbd;
 $color-text-tab: #3b3b3b;
 
+/* SEARCH BAR */
+$search-bg-color: #f6f5f2;
+
 /* ESPAÇAMENTOS*/
 $card-width: 304px;
 $card-height: 500px;
+$spacing-4xl: 4rem;
 $spacing-3xl: 3rem;
 $spacing-2xl: 2.25rem;
 $spacing-xl: 2rem;
@@ -49,6 +53,7 @@ $spacing-xs: 0.5rem;
 $shadow-text: 0px 4px 4px rgba(0, 0, 0, 0.25);
 $shadow-line: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 $shadow-card: 0px 3px 19px 0px rgba(0, 0, 0, 0.22);
+$shadow-navbar: 0px 8px 16px 0px rgba(57, 48, 19, 0.12);
 
 /* BORDAS */
 $border-radius-md: 0.62rem;

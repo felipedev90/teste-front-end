@@ -1,0 +1,145 @@
+@use "../../styles/variables" as *;
+
+.header {
+  font-family: $font-family-primary;
+  border-bottom: 1px solid $color-lines;
+
+  &__container,
+  &__top-bar,
+  &__nav-bar {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 $spacing-md;
+  }
+
+  // TOP BAR
+  &__top-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: $spacing-xs 0;
+    border-bottom: 1px solid $color-lines;
+  }
+
+  &__top-item {
+    font-size: $font-xs;
+    display: flex;
+    align-items: center;
+    gap: $spacing-xs;
+    color: $color-text-muted;
+  }
+
+  &__top-item--highlight {
+    color: $color-primary;
+  }
+
+  // MAIN BAR
+  &__main-bar {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: $spacing-md 0;
+    border-bottom: 1px solid $color-lines;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: $spacing-4xl;
+  }
+
+  &__logo {
+    img {
+      height: 40px;
+    }
+  }
+
+  &__search {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    background-color: $search-bg-color;
+    border-radius: $border-radius-md;
+    padding: 0 $spacing-md;
+    height: $spacing-3xl;
+
+    input {
+      flex: 1;
+      border: none;
+      background: transparent;
+      font-size: $font-sm;
+      color: $color-text-main;
+      outline: none;
+
+      &::placeholder {
+        color: $text-secondary-color;
+      }
+    }
+
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: $spacing-lg;
+  }
+
+  &__icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  // NAV BAR
+  &__nav-bar {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: $spacing-sm 0;
+    box-shadow: $shadow-navbar;
+  }
+
+  &__nav-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__nav-item {
+    a {
+      text-decoration: none;
+      font-size: $font-xs;
+      color: $text-secondary-color;
+      font-weight: $font-weight-semi-bold;
+
+      display: flex;
+      align-items: center;
+      gap: $spacing-xs;
+
+      &:hover {
+        color: $color-primary;
+      }
+    }
+
+    &--active a {
+      color: $color-primary;
+    }
+  }
+}

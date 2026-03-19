@@ -1,0 +1,61 @@
+@use "../../styles/variables" as *;
+
+.brands {
+  padding: $spacing-3xl 0;
+
+  &__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 $spacing-md;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $spacing-2xl;
+  }
+
+  &__title {
+    font-family: $font-family-primary;
+    font-size: $font-lg;
+    font-weight: $font-weight-bold;
+    color: $color-primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    gap: $spacing-md;
+  }
+
+  &__item {
+    width: 211px;
+    height: 211px;
+    background-color: $color-surface;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: $shadow-card;
+    cursor: pointer;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow:
+        $shadow-card,
+        0 10px 20px 0 rgb(0 0 0 / 30%);
+    }
+
+    img {
+      width: 120px;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+}

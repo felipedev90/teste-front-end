@@ -48,8 +48,8 @@ export default function App() {
       />
       <PartnersBanners />
       <ProductShowcase products={products} onSetProduct={setSelectedProduct} />
-      <Brands />
       <PartnersBanners />
+      <Brands />
       <ProductShowcase products={products} onSetProduct={setSelectedProduct} />
       {selectedProduct && (
         <ProductModal
@@ -57,6 +57,7 @@ export default function App() {
           onClose={() => setSelectedProduct(null)}
         />
       )}
+      <PartnersBanners />
       <Newsletter />
       <Footer />
     </>

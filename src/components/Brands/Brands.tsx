@@ -1,4 +1,5 @@
 import Logo from "../../assets/icons/Logo.svg";
+import "./Brands.scss";
 
 export default function Brands() {
   const brands: number[] = [1, 2, 3, 4, 5];

@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { Product } from "./types/Product";
 import Header from "./components/Header/Header";
-import HeroBanner from "./components/HeroBanner/HeroBanner";
+import Footer from "./components/Footer/Footer";
 import fetchProducts from "./services/productFetch";
+import HeroBanner from "./components/HeroBanner/HeroBanner";
 import ProductModal from "./components/ProductModal/ProductModal";
 import ProductShowcase from "./components/ProductShowcase/ProductShowcase";
 
@@ -51,6 +52,7 @@ export default function App() {
           onClose={() => setSelectedProduct(null)}
         />
       )}
+      <Footer />
     </>
   );
 }

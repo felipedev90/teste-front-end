@@ -5,7 +5,7 @@
   width: 100%;
 
   &__main {
-    background-color: $search-bg-color;
+    background-color: $color-neutral-gray-100;
     padding: $spacing-3xl 0;
   }
 
@@ -33,7 +33,7 @@
 
   &__description {
     font-size: $font-sm;
-    color: $color-text-muted;
+    color: $color-neutral-gray-600;
     line-height: 1.5;
   }
 
@@ -45,8 +45,8 @@
       transition: opacity 0.2s;
 
       img {
-        width: 24px;
-        height: 24px;
+        width: $spacing-lg;
+        height: $spacing-lg;
       }
 
       &:hover {
@@ -58,7 +58,7 @@
   &__divider {
     width: 1px;
     height: 120px;
-    background-color: $color-lines-tab;
+    background-color: $color-neutral-gray-300;
     margin: 0 6rem;
   }
 
@@ -86,11 +86,11 @@
     li a {
       text-decoration: none;
       font-size: $font-sm;
-      color: $color-text-muted;
+      color: $color-neutral-gray-600;
       transition: color 0.2s;
 
       &:hover {
-        color: $color-primary;
+        color: $color-brand-blue;
       }
     }
   }
@@ -98,24 +98,24 @@
   &__title {
     font-size: $font-md;
     font-weight: $font-weight-bold;
-    color: $text-primary-color;
+    color: $color-neutral-gray-800;
     margin: 0;
   }
 
   &__bottom {
-    background-color: $color-surface;
+    background-color: $color-neutral-white;
     padding: $spacing-md 0;
     text-align: center;
-    border-top: 1px solid #eaeaea;
+    border-top: 1px solid $color-neutral-gray-200;
 
     p {
       font-size: $font-xs;
-      color: $color-text-muted;
+      color: $color-neutral-gray-600;
       margin: 0;
     }
 
     strong {
-      color: $color-primary;
+      color: $color-brand-blue;
     }
   }
 

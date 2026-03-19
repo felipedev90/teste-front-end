@@ -24,7 +24,7 @@
   &__box {
     width: 128px;
     height: 128px;
-    background-color: $search-bg-color;
+    background-color: $color-neutral-gray-100;
     border-radius: $border-radius-md;
     display: flex;
     align-items: center;
@@ -42,25 +42,25 @@
   &__name {
     font-size: $font-sm;
     font-weight: $font-weight-regular;
-    color: $text-primary-color;
+    color: $color-neutral-gray-800;
     transition: color 0.3s ease;
   }
 
   &--active {
     .category__box {
-      background-color: $color-surface;
+      background-color: $color-neutral-white;
       box-shadow: $shadow-text;
     }
 
     .category__name {
-      color: $color-primary;
+      color: $color-brand-blue;
       font-weight: $font-weight-bold;
     }
   }
 
   &:hover:not(.category--active) {
     .category__box {
-      background-color: $color-lines;
+      background-color: $color-neutral-gray-200;
     }
   }
 }

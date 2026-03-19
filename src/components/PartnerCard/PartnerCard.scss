@@ -38,14 +38,14 @@
   }
 
   &__title {
-    color: $color-surface;
-    font-size: 40px;
+    color: $color-neutral-white;
+    font-size: $font-2xl;
     font-weight: $font-weight-bold;
     margin: 0;
   }
 
   &__description {
-    color: $color-surface;
+    color: $color-neutral-white;
     font-size: $font-sm;
     line-height: 1.5;
     margin: 0;
@@ -53,8 +53,8 @@
   }
 
   &__button {
-    background-color: $bg-tertiary-color;
-    color: $color-text-main;
+    background-color: $color-brand-yellow;
+    color: $color-neutral-black;
     font-weight: $font-weight-bold;
     font-size: $font-sm;
     letter-spacing: 1px;

@@ -14,7 +14,7 @@
   &__title {
     font-size: $font-lg;
     font-weight: $font-weight-bold;
-    color: $color-primary;
+    color: $color-brand-blue;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -25,7 +25,7 @@
       content: "";
       flex: 1;
       height: 0.0625rem;
-      background-color: $color-lines;
+      background-color: $color-neutral-gray-200;
       margin: 0 $spacing-md;
       max-width: 360px;
       transform: translateY(-8px);
@@ -37,7 +37,7 @@
     justify-content: center;
     list-style: none;
     text-transform: uppercase;
-    border: 0.0625rem solid $color-lines-tab;
+    border: 0.0625rem solid $color-neutral-gray-300;
     overflow: hidden;
   }
 
@@ -45,9 +45,9 @@
     padding: $spacing-xs $spacing-sm;
     font-size: $font-sm;
     font-weight: $font-weight-regular;
-    color: $color-text-tab;
+    color: $color-neutral-gray-700;
     cursor: pointer;
-    border-right: 0.0625rem solid $color-lines-tab;
+    border-right: 0.0625rem solid $color-neutral-gray-300;
     flex: 1;
     text-align: center;
 
@@ -56,14 +56,14 @@
     }
 
     &--active {
-      color: $color-primary;
+      color: $color-brand-blue;
       font-weight: $font-weight-bold;
     }
   }
 
   &__view-all {
     font-size: $font-sm;
-    color: $text-primary-color;
+    color: $color-neutral-gray-800;
     text-decoration: none;
     font-weight: $font-weight-bold;
     display: inline-block;
@@ -93,7 +93,7 @@
 
   &__arrow {
     font-size: $font-md;
-    background: $color-surface;
+    background: $color-neutral-white;
     border: none;
     box-shadow: $shadow-card;
     border-radius: 50%;
@@ -105,7 +105,7 @@
     cursor: pointer;
     position: absolute;
     z-index: 10;
-    color: $color-text-main;
+    color: $color-neutral-black;
     font-weight: $font-weight-light;
 
     &--prev {

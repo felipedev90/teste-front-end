@@ -3,7 +3,7 @@
 .product-card {
   width: 100%;
   max-width: 304px;
-  background-color: $color-surface;
+  background-color: $color-neutral-white;
   border-radius: $border-radius-md;
   box-shadow: $shadow-card;
   padding: 1.5rem;
@@ -26,7 +26,7 @@
   &__title {
     font-size: $font-sm;
     font-weight: $font-weight-light;
-    color: $text-primary-color;
+    color: $color-neutral-gray-800;
     margin-bottom: $spacing-md;
     line-height: 1.4;
   }
@@ -39,33 +39,33 @@
   &__price-old {
     font-size: $font-sm;
     font-weight: $font-weight-regular;
-    color: $color-text-muted;
+    color: $color-neutral-gray-600;
     text-decoration: line-through;
   }
 
   &__price-current {
     font-size: $font-md;
     font-weight: $font-weight-bold;
-    color: $text-primary-color;
+    color: $color-neutral-gray-800;
     padding: 0.2rem 0;
   }
 
   &__installments {
     font-size: $font-xs;
     font-weight: $font-weight-regular;
-    color: $text-primary-color;
+    color: $color-neutral-gray-800;
   }
 
   &__shipping {
     font-size: $font-xs;
     font-weight: $font-weight-regular;
-    color: $color-primary;
+    color: $color-brand-blue;
     padding: $spacing-xs 0;
   }
 
   &__button {
-    background-color: $color-primary;
-    color: $color-surface;
+    background-color: $color-brand-blue;
+    color: $color-neutral-white;
     font-family: $font-family-primary;
     font-weight: $font-weight-bold;
     font-size: 0.875rem;

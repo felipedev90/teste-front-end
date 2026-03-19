@@ -40,7 +40,7 @@
   }
 
   &__title {
-    color: $color-surface;
+    color: $color-neutral-white;
     font-family: $font-family-primary;
     font-size: $font-3xl;
     font-weight: $font-weight-semi-bold;
@@ -48,7 +48,7 @@
   }
 
   &__subtitle {
-    color: $color-surface;
+    color: $color-neutral-white;
     font-family: $font-family-primary;
     font-size: $font-lg;
     font-weight: $font-weight-regular;
@@ -57,12 +57,12 @@
 
   &__highlight {
     font-weight: $font-weight-bold;
-    color: $bg-tertiary-color;
+    color: $color-brand-yellow;
   }
 
   &__button {
-    background-color: $bg-tertiary-color;
-    color: $bg-secondary-color;
+    background-color: $color-brand-yellow;
+    color: $color-brand-purple;
     font-family: $font-family-primary;
     font-size: $font-sm;
     font-weight: $font-weight-semi-bold;

@@ -1,7 +1,7 @@
 @use "../../styles/variables" as *;
 
 .newsletter {
-  background-color: $bg-secondary-color;
+  background-color: $color-neutral-gray-900;
   font-family: $font-family-primary;
   padding: $spacing-xl 0;
   min-height: 162px;
@@ -25,14 +25,14 @@
   }
 
   &__title {
-    color: $color-surface;
+    color: $color-neutral-white;
     font-size: $font-lg;
     font-weight: $font-weight-bold;
     margin: 0;
   }
 
   &__description {
-    color: $color-surface;
+    color: $color-neutral-white;
     font-size: $font-sm;
     font-weight: $font-weight-light;
     line-height: 1.5;
@@ -57,17 +57,17 @@
       border: none;
       border-radius: $border-radius-sm;
       font-size: $font-sm;
-      color: $color-text-main;
+      color: $color-neutral-black;
       outline: none;
 
       &::placeholder {
-        color: $color-text-muted;
+        color: $color-neutral-gray-600;
       }
     }
 
     button {
-      background-color: $bg-tertiary-color;
-      color: $bg-secondary-color;
+      background-color: $color-brand-yellow;
+      color: $color-brand-purple;
       font-weight: $font-weight-semi-bold;
       font-family: $font-family-primary;
       border: none;
@@ -90,13 +90,13 @@
   }
 
   input[type="checkbox"] {
-    width: 16px;
-    height: 16px;
+    width: $spacing-md;
+    height: $spacing-md;
     cursor: pointer;
   }
 
   label {
-    color: $color-surface;
+    color: $color-neutral-white;
     font-size: $font-sm;
     font-weight: $font-weight-light;
     cursor: pointer;

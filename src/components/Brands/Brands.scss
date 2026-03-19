@@ -17,7 +17,7 @@
     font-family: $font-family-primary;
     font-size: $font-lg;
     font-weight: $font-weight-bold;
-    color: $color-primary;
+    color: $color-brand-blue;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,7 +34,7 @@
   &__item {
     width: 211px;
     height: 211px;
-    background-color: $color-surface;
+    background-color: $color-neutral-white;
     border-radius: 50%;
     display: flex;
     justify-content: center;

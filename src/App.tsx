@@ -8,7 +8,7 @@ import Categories from "./components/Categories/Categories";
 import HeroBanner from "./components/HeroBanner/HeroBanner";
 import Newsletter from "./components/Newsletter/Newsletter";
 import ProductModal from "./components/ProductModal/ProductModal";
-import PartnerBanners from "./components/PartnerBanners/PartnerBanners";
+import PartnersBanners from "./components/PartnersBanners/PartnerBanners";
 import ProductShowcase from "./components/ProductShowcase/ProductShowcase";
 
 const tabItems = [
@@ -46,10 +46,10 @@ export default function App() {
         tabs={tabItems}
         onSetProduct={setSelectedProduct}
       />
-      <PartnerBanners />
+      <PartnersBanners />
       <ProductShowcase products={products} onSetProduct={setSelectedProduct} />
       <Brands />
-      <PartnerBanners />
+      <PartnersBanners />
       <ProductShowcase products={products} onSetProduct={setSelectedProduct} />
       {selectedProduct && (
         <ProductModal

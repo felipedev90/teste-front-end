@@ -1,3 +1,5 @@
+import "./Newsletter.scss";
+
 export default function Newsletter() {
   return (
     <section className="newsletter">

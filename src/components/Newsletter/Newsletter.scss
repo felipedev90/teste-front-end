@@ -1,0 +1,104 @@
+@use "../../styles/variables" as *;
+
+.newsletter {
+  background-color: $bg-secondary-color;
+  font-family: $font-family-primary;
+  padding: $spacing-xl 0;
+  min-height: 162px;
+
+  &__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 $spacing-md;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: $spacing-2xl;
+  }
+
+  &__text {
+    flex: 1;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-xs;
+  }
+
+  &__title {
+    color: $color-surface;
+    font-size: $font-lg;
+    font-weight: $font-weight-bold;
+    margin: 0;
+  }
+
+  &__description {
+    color: $color-surface;
+    font-size: $font-sm;
+    font-weight: $font-weight-light;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  &__form {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-sm;
+    max-width: 650px;
+  }
+
+  &__inputs {
+    display: flex;
+    gap: $spacing-md;
+
+    input {
+      flex: 1;
+      padding: $spacing-sm $spacing-md;
+      border: none;
+      border-radius: $border-radius-sm;
+      font-size: $font-sm;
+      color: $color-text-main;
+      outline: none;
+
+      &::placeholder {
+        color: $color-text-muted;
+      }
+    }
+
+    button {
+      background-color: $bg-tertiary-color;
+      color: $bg-secondary-color;
+      font-weight: $font-weight-semi-bold;
+      font-family: $font-family-primary;
+      border: none;
+      border-radius: $border-radius-sm;
+      font-size: $font-sm;
+      padding: 0 $spacing-xl;
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &__checkbox {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+  }
+
+  input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+  }
+
+  label {
+    color: $color-surface;
+    font-size: $font-sm;
+    font-weight: $font-weight-light;
+    cursor: pointer;
+  }
+}

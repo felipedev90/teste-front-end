@@ -3,6 +3,7 @@ import { Product } from "./types/Product";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import fetchProducts from "./services/productFetch";
+import Categories from "./components/Categories/Categories";
 import HeroBanner from "./components/HeroBanner/HeroBanner";
 import ProductModal from "./components/ProductModal/ProductModal";
 import ProductShowcase from "./components/ProductShowcase/ProductShowcase";
@@ -36,6 +37,7 @@ export default function App() {
     <>
       <Header />
       <HeroBanner />
+      <Categories />
       <ProductShowcase
         products={products}
         tabs={tabItems}

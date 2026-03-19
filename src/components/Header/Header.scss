@@ -1,4 +1,5 @@
 @use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
 
 .header {
   font-family: $font-family-primary;
@@ -7,9 +8,7 @@
   &__container,
   &__top-bar,
   &__nav-bar {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 $spacing-md;
+    @include container;
   }
 
   // TOP BAR
@@ -68,7 +67,7 @@
       border: none;
       background: transparent;
       font-size: $font-sm;
-      color: $color-neutral-black;
+      color: $color-brand-purple;
       outline: none;
 
       &::placeholder {
@@ -77,12 +76,10 @@
     }
 
     button {
+      @include flex-center;
       background: none;
       border: none;
       cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
     }
   }
 
@@ -93,16 +90,9 @@
   }
 
   &__icon-btn {
+    @include button-base;
+    @include flex-center;
     background: none;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    &:hover {
-      opacity: 0.8;
-    }
   }
 
   // NAV BAR

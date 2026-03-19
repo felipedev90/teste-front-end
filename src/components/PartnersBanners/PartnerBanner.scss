@@ -1,12 +1,11 @@
 @use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
 
 .partners {
   padding: $spacing-3xl 0;
 
   &__container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 $spacing-md;
+    @include container;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: $spacing-md;

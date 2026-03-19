@@ -1,4 +1,5 @@
 @use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
 
 .product-showcase {
   max-width: 1280px;
@@ -12,12 +13,10 @@
   }
 
   &__title {
+    @include flex-center;
     font-size: $font-lg;
     font-weight: $font-weight-bold;
     color: $color-brand-blue;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     margin-bottom: $spacing-xs;
 
     &::before,
@@ -105,15 +104,15 @@
     cursor: pointer;
     position: absolute;
     z-index: 10;
-    color: $color-neutral-black;
+    color: $color-neutral-gray-900;
     font-weight: $font-weight-light;
 
     &--prev {
-      left: -30px;
+      left: -20px;
     }
 
     &--next {
-      right: -30px;
+      right: -20px;
     }
   }
 }

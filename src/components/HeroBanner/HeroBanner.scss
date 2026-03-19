@@ -1,4 +1,5 @@
 @use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
 
 .hero {
   width: 100%;
@@ -23,10 +24,8 @@
   }
 
   &__container {
-    max-width: 1280px;
-    width: 100%;
+    @include container;
     margin: 0 auto;
-    padding: 0 $spacing-md;
     position: relative;
     z-index: 2;
   }
@@ -61,19 +60,12 @@
   }
 
   &__button {
+    @include button-base;
     background-color: $color-brand-yellow;
     color: $color-brand-purple;
-    font-family: $font-family-primary;
     font-size: $font-sm;
     font-weight: $font-weight-semi-bold;
     border-radius: $border-radius-sm;
-    border: none;
     padding: $spacing-sm $spacing-xl;
-    cursor: pointer;
-    transition: opacity 0.2s ease;
-
-    &:hover {
-      opacity: 0.9;
-    }
   }
 }

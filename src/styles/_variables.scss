@@ -18,20 +18,6 @@ $font-xs: 0.75rem; // 12px
 $font-xxs: 0.62rem; // 10px
 
 /* CORES */
-// $color-surface: #fff; // OK
-// $color-primary: #3442b5; // OK
-// $color-text-main: #000;
-// $color-text-muted: #808080; // OK
-// $color-border: #b1b1b1;
-// $bg-secondary-color: #271c47; // OK
-// $bg-tertiary-color: #f7ca11; // OK
-// $text-primary-color: #3f3f40; // OK
-// $text-secondary-color: #9f9f9f; // OK
-// $color-lines: #dedede; // OK
-// $color-lines-tab: #bdbdbd; // OK
-// $color-text-tab: #3b3b3b; // OK
-// $search-bg-color: #f6f5f2; // OK
-
 $color-neutral-white: #fff; // $color-surface
 $color-neutral-gray-100: #f6f5f2; // $search-bg-color
 $color-neutral-gray-200: #dedede; // $color-lines
@@ -41,8 +27,8 @@ $color-neutral-gray-500: #9f9f9f; // $text-secondary-color
 $color-neutral-gray-600: #808080; // $color-text-muted
 $color-neutral-gray-700: #3b3b3b; // $color-text-tab
 $color-neutral-gray-800: #3f3f40; // $text-primary-color
-$color-neutral-gray-900: #271c47; // $bg-secondary-color
-$color-neutral-black: #000; // $color-text-main
+$color-neutral-gray-900: #000; // $bg-secondary-color
+// $color-neutral-black: #000; // $color-text-main
 $color-brand-yellow: #f7ca11; // $bg-tertiary-color
 $color-brand-blue: #3442b5; // $color-primary
 $color-brand-purple: #271c47; // $bg-secondary-color
@@ -50,7 +36,6 @@ $color-brand-purple: #271c47; // $bg-secondary-color
 /* ESPAÇAMENTOS */
 $card-width: 304px;
 $card-height: 500px;
-
 $spacing-4xl: 4rem; // 64px
 $spacing-3xl: 3rem; // 48px
 $spacing-2xl: 2.25rem; // 36px

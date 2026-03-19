@@ -1,4 +1,5 @@
 @use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
 
 .product-card {
   width: 100%;
@@ -64,21 +65,14 @@
   }
 
   &__button {
+    @include button-base;
     background-color: $color-brand-blue;
     color: $color-neutral-white;
-    font-family: $font-family-primary;
     font-weight: $font-weight-bold;
     font-size: 0.875rem;
-    border: none;
     border-radius: $border-radius-sm;
     padding: $spacing-sm;
-    cursor: pointer;
     text-align: center;
     width: 100%;
-    transition: opacity 0.2s ease;
-
-    &:hover {
-      opacity: 0.9;
-    }
   }
 }

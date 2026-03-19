@@ -1,4 +1,5 @@
 @use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
 
 .partner {
   &__card {
@@ -53,20 +54,14 @@
   }
 
   &__button {
+    @include button-base;
     background-color: $color-brand-yellow;
-    color: $color-neutral-black;
+    color: $color-neutral-gray-900;
     font-weight: $font-weight-bold;
     font-size: $font-sm;
     letter-spacing: 1px;
-    border: none;
     border-radius: $border-radius-sm;
     padding: $spacing-md $spacing-2xl;
-    cursor: pointer;
     text-transform: uppercase;
-    transition: opacity 0.3s ease;
-
-    &:hover {
-      opacity: 0.8;
-    }
   }
 }

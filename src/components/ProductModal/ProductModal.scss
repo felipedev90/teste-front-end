@@ -1,15 +1,14 @@
 @use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
 
 .modal-overlay {
+  @include flex-center;
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   background-color: rgb(0 0 0 / 50%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
   z-index: 1000;
 }
 
@@ -41,10 +40,8 @@
   }
 
   &__image-wrapper {
+    @include flex-center;
     flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
   }
 
   &__image {
@@ -117,7 +114,7 @@
     background: none;
     border: none;
     font-size: $font-md;
-    color: $color-neutral-gray-900;
+    color: $color-brand-purple;
     cursor: pointer;
     padding: 0 $spacing-xs;
   }
@@ -132,23 +129,17 @@
     font-family: $font-family-primary;
     font-size: $font-sm;
     font-weight: $font-weight-regular;
-    color: $color-neutral-gray-900;
+    color: $color-brand-purple;
   }
 
   &__buy-btn {
+    @include button-base;
     flex: 1;
     background-color: $color-brand-yellow;
-    border: none;
     border-radius: $border-radius-sm;
     height: $spacing-2xl;
-    color: $color-neutral-gray-900;
-    font-family: $font-family-primary;
+    color: $color-brand-purple;
     font-weight: $font-weight-bold;
     text-transform: uppercase;
-    cursor: pointer;
-
-    &:hover {
-      opacity: 0.9;
-    }
   }
 }

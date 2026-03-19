@@ -1,15 +1,14 @@
 @use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
 
 .newsletter {
-  background-color: $color-neutral-gray-900;
+  background-color: $color-brand-purple;
   font-family: $font-family-primary;
   padding: $spacing-xl 0;
   min-height: 162px;
 
   &__container {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 $spacing-md;
+    @include container;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -57,7 +56,7 @@
       border: none;
       border-radius: $border-radius-sm;
       font-size: $font-sm;
-      color: $color-neutral-black;
+      color: $color-neutral-gray-900;
       outline: none;
 
       &::placeholder {
@@ -66,20 +65,14 @@
     }
 
     button {
+      @include button-base;
+
       background-color: $color-brand-yellow;
       color: $color-brand-purple;
       font-weight: $font-weight-semi-bold;
-      font-family: $font-family-primary;
-      border: none;
       border-radius: $border-radius-sm;
       font-size: $font-sm;
       padding: 0 $spacing-xl;
-      cursor: pointer;
-      transition: opacity 0.3s ease;
-
-      &:hover {
-        opacity: 0.8;
-      }
     }
   }
 

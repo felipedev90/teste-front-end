@@ -79,7 +79,7 @@ export default function Footer() {
       </div>
 
       <div className="footer__bottom">
-        <div className="footer__container">
+        <div className="footer__container-bottom">
           <p>
             © {new Date().getFullYear()} Econverse • Todos os direitos
             reservados • Desenvolvido por <strong>Felipe Augusto</strong>

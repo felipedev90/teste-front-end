@@ -1,5 +1,6 @@
 import parceiros from "../../assets/images/parceiros.webp";
 import PartnerCard from "../PartnerCard/PartnerCard";
+import "./PartnerBanner.scss";
 
 interface PartnerArray {
   id: number;

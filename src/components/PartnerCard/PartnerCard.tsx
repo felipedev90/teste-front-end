@@ -1,3 +1,5 @@
+import "./PartnerCard.scss";
+
 interface PartnerCardProps {
   title: string;
   description: string;

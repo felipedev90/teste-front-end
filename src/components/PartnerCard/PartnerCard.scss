@@ -1,0 +1,72 @@
+@use "../../styles/variables" as *;
+
+.partner {
+  &__card {
+    font-family: $font-family-primary;
+    border-radius: $border-radius-lg;
+    overflow: hidden;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 350px;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to right,
+        rgb(0 0 0 / 80%) 0%,
+        rgb(0 0 0 / 0%) 70%
+      );
+      z-index: 1;
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    padding: 0 $spacing-2xl;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $spacing-md;
+    max-width: 320px;
+  }
+
+  &__title {
+    color: $color-surface;
+    font-size: 40px;
+    font-weight: $font-weight-bold;
+    margin: 0;
+  }
+
+  &__description {
+    color: $color-surface;
+    font-size: $font-sm;
+    line-height: 1.5;
+    margin: 0;
+    padding-bottom: $spacing-lg;
+  }
+
+  &__button {
+    background-color: $bg-tertiary-color;
+    color: $color-text-main;
+    font-weight: $font-weight-bold;
+    font-size: $font-sm;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: $border-radius-sm;
+    padding: $spacing-md $spacing-2xl;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: opacity 0.3s ease;
+
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

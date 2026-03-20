@@ -62,7 +62,7 @@ npm test
 - **Proxy no Vite:** Configurado `server.proxy` no `vite.config.ts` para contornar CORS da API em ambiente de desenvolvimento, sem depender de extensões ou configurações externas.
 - **Lifting State Up:** Estado do produto selecionado gerenciado no `App.tsx`, permitindo que qualquer card em qualquer vitrine abra o mesmo modal. Um único estado (`selectedProduct`) controla tanto a visibilidade quanto o conteúdo do modal.
 - **Separação de responsabilidades:** Service isolado para fetch da API (`services/`), tipos centralizados (`types/`), utilitários de formatação (`utils/`) e componentes focados em renderização.
-- **Componente reutilizável:** `ProductShowcase` aceita prop opcional `tabs` — com tabs renderiza abas de categorias, sem tabs renderiza "Ver todos". Um componente atende as duas variações do layout.
+- **Componente reutilizável:** `ProductShowcase` aceita prop opcional `tabs`, com tabs renderiza abas de categorias, sem tabs renderiza "Ver todos". Um componente atende as duas variações do layout.
 - **CI/CD:** Pipeline no GitHub Actions executa lint, testes e build a cada push na main. Husky + lint-staged validam o código antes de cada commit.
 
 ## Estrutura do Projeto

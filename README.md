@@ -6,7 +6,7 @@ Projeto desenvolvido com foco em componentização, responsividade e fidelidade 
 
 ## Deploy
 
-🔗 [Ver projeto online](URL)
+🔗 [Ver projeto online](https://econverse-frontendtest.vercel.app/)
 
 ## Tecnologias Utilizadas
 

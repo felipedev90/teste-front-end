@@ -61,7 +61,7 @@ export default function Categories() {
             className={`category ${cat.active ? "category--active" : ""}`}
           >
             <div className="category__box">
-              <img src={cat.icon} alt={cat.name} />
+              <img src={cat.icon} alt={cat.name} width={100} height={100} />
             </div>
             <span className="category__name">{cat.name}</span>
           </div>

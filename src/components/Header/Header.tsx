@@ -16,14 +16,14 @@ export default function Header() {
       {/* TOP BAR */}
       <div className="header__top-bar">
         <div className="header__top-item">
-          <img src={ShieldCheck} alt="Segurança" />
+          <img src={ShieldCheck} alt="Segurança" width={24} height={24} />
           <span>
             Compra{" "}
             <strong className="header__top-item--highlight">100% segura</strong>
           </span>
         </div>
         <div className="header__top-item">
-          <img src={Truck} alt="Frete" />
+          <img src={Truck} alt="Frete" width={24} height={24} />
           <span>
             <strong className="header__top-item--highlight">
               Frete grátis
@@ -32,7 +32,7 @@ export default function Header() {
           </span>
         </div>
         <div className="header__top-item">
-          <img src={CreditCard} alt="Parcelamento" />
+          <img src={CreditCard} alt="Parcelamento" width={24} height={24} />
           <span>
             <strong className="header__top-item--highlight">Parcele</strong>{" "}
             suas compras
@@ -44,28 +44,28 @@ export default function Header() {
       <div className="header__main-bar">
         <div className="header__container">
           <div className="header__logo">
-            <img src={Logo} alt="Econverse" />
+            <img src={Logo} alt="Econverse" width={160} height={40} />
           </div>
 
           <div className="header__search">
             <input type="text" placeholder="O que você está buscando?" />
             <button aria-label="Buscar">
-              <img src={MagnifyingGlass} alt="Buscar" />
+              <img src={MagnifyingGlass} alt="Buscar" width={24} height={24} />
             </button>
           </div>
 
           <div className="header__actions">
             <button className="header__icon-btn" aria-label="Meus Pedidos">
-              <img src={Group} alt="Pedidos" />
+              <img src={Group} alt="Pedidos" width={24} height={24} />
             </button>
             <button className="header__icon-btn" aria-label="Favoritos">
-              <img src={Heart} alt="Favoritos" />
+              <img src={Heart} alt="Favoritos" width={24} height={24} />
             </button>
             <button className="header__icon-btn" aria-label="Perfil">
-              <img src={UserCircle} alt="Perfil" />
+              <img src={UserCircle} alt="Perfil" width={24} height={24} />
             </button>
             <button className="header__icon-btn" aria-label="Carrinho">
-              <img src={ShoppingCart} alt="Carrinho" />
+              <img src={ShoppingCart} alt="Carrinho" width={24} height={24} />
             </button>
           </div>
         </div>
@@ -94,7 +94,7 @@ export default function Header() {
           </li>
           <li className="header__nav-item">
             <a href="#">
-              <img src={CrownSimple} alt="Coroa" />
+              <img src={CrownSimple} alt="Coroa" width={24} height={24} />
               ASSINATURA
             </a>
           </li>

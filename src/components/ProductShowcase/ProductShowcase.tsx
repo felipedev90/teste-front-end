@@ -15,17 +15,15 @@ export default function ProductShowcase({
 }: ProductShowcaseProps) {
   return (
     <section className="product-showcase">
-      {/* Cabeçalho da Vitrine */}
       <div className="product-showcase__header">
         <h2 className="product-showcase__title">Produtos relacionados</h2>
 
-        {/* Renderização Condicional: Abas ou "Ver todos" */}
         {tabs ? (
           <ul className="product-showcase__tabs">
             {tabs.map((tab, index) => (
               <li
                 key={tab}
-                // A primeira aba (index 0) recebe a classe de ativa (ex: CELULAR)
+                // A primeira aba (index 0) recebe a classe de ativa
                 className={`product-showcase__tab-item ${index === 0 ? "product-showcase__tab-item--active" : ""}`}
               >
                 {tab}
@@ -39,7 +37,6 @@ export default function ProductShowcase({
         )}
       </div>
 
-      {/* Grid de Produtos (Carrossel) */}
       <div className="product-showcase__grid">
         {/* Simulação de Setas do Carrossel */}
         <button className="product-showcase__arrow product-showcase__arrow--prev">

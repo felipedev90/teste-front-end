@@ -79,11 +79,11 @@
   }
 
   &__product-list {
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: $spacing-lg;
-    padding: $spacing-md;
-    scrollbar-width: none;
+    gap: $spacing-md;
+    padding: $spacing-md 0;
 
     &::-webkit-scrollbar {
       display: none;
@@ -108,11 +108,11 @@
     font-weight: $font-weight-light;
 
     &--prev {
-      left: -20px;
+      left: -40px;
     }
 
     &--next {
-      right: -20px;
+      right: -40px;
     }
   }
 }

@@ -3,7 +3,7 @@
 
 .header {
   font-family: $font-family-primary;
-  border-bottom: 1px solid $color-lines;
+  border-bottom: 1px solid $color-neutral-gray-200;
 
   &__container,
   &__top-bar,
@@ -14,8 +14,9 @@
   // TOP BAR
   &__top-bar {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    gap: 9rem;
     padding: $spacing-xs 0;
     border-bottom: 1px solid $color-neutral-gray-200;
   }
@@ -57,10 +58,12 @@
     flex: 1;
     display: flex;
     align-items: center;
+    margin: 0 auto;
     background-color: $color-neutral-gray-100;
     border-radius: $border-radius-md;
     padding: 0 $spacing-md;
     height: $spacing-3xl;
+    min-width: 630px;
 
     input {
       flex: 1;

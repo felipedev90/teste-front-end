@@ -25,7 +25,7 @@
 
   &__container {
     @include container;
-    margin: 0 auto;
+    width: 100%;
     position: relative;
     z-index: 2;
   }
@@ -64,8 +64,10 @@
     background-color: $color-brand-yellow;
     color: $color-brand-purple;
     font-size: $font-sm;
+    letter-spacing: 0.8px;
     font-weight: $font-weight-semi-bold;
     border-radius: $border-radius-sm;
-    padding: $spacing-sm $spacing-xl;
+    padding: $spacing-md $spacing-3xl;
+    margin-top: $spacing-lg;
   }
 }

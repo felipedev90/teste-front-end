@@ -3,13 +3,14 @@
 
 .product-card {
   width: 100%;
-  max-width: 304px;
+
   background-color: $color-neutral-white;
   border-radius: $border-radius-md;
   box-shadow: $shadow-card;
-  padding: 1.5rem;
+  padding: $spacing-md;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   font-family: $font-family-primary;
 
   &__image-wrapper {
@@ -20,7 +21,8 @@
 
     & img {
       max-width: 100%;
-      height: auto;
+      height: 228px;
+      object-fit: contain;
     }
   }
 

@@ -1,0 +1,36 @@
+@use "./variables" as *;
+@use "./breakpoints" as *;
+
+@mixin container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 $spacing-md;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin button-base {
+  border: none;
+  cursor: pointer;
+  font-family: $font-family-primary;
+  transition: opacity 0.2s ease;
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $breakpoint-mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $breakpoint-tablet) {
+    @content;
+  }
+}

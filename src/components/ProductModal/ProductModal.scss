@@ -1,0 +1,188 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.modal-overlay {
+  @include flex-center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(0 0 0 / 50%);
+  z-index: 1000;
+}
+
+.modal {
+  position: relative;
+  background-color: $color-neutral-white;
+  border: none;
+  border-radius: $border-radius-sm;
+  padding: $spacing-xl;
+  width: 90%;
+  max-width: 769px;
+  box-shadow: $shadow-card;
+
+  &__close {
+    position: absolute;
+    top: $spacing-sm;
+    right: $spacing-lg;
+    background: none;
+    border: none;
+    font-size: $font-sm;
+    color: $color-neutral-gray-500;
+    cursor: pointer;
+  }
+
+  &__content {
+    display: flex;
+    gap: $spacing-xl;
+    align-items: center;
+
+    @include mobile {
+      flex-direction: column;
+      gap: $spacing-md;
+    }
+  }
+
+  &__image-wrapper {
+    @include flex-center;
+    flex: 3;
+
+    @include mobile {
+      width: 100%;
+    }
+  }
+
+  &__image {
+    max-width: 100%;
+    max-height: 380px;
+    height: auto;
+
+    @include mobile {
+      max-height: 250px;
+      width: auto;
+    }
+  }
+
+  &__info {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+  }
+
+  &__title {
+    font-family: $font-family-primary;
+    font-size: $font-md;
+    font-weight: $font-weight-regular;
+    color: $color-neutral-gray-800;
+    text-transform: uppercase;
+
+    @include mobile {
+      font-size: $font-sm;
+    }
+  }
+
+  &__price {
+    font-family: $font-family-primary;
+    font-size: $font-md;
+    font-weight: $font-weight-semi-bold;
+    color: $color-neutral-gray-800;
+    letter-spacing: 0.12rem;
+
+    @include mobile {
+      font-size: $font-sm;
+    }
+  }
+
+  &__description {
+    font-family: $font-family-primary;
+    font-size: $font-xs;
+    font-weight: $font-weight-regular;
+    color: $color-neutral-gray-500;
+    margin: $spacing-md 0;
+  }
+
+  &__link {
+    font-family: $font-family-primary;
+    font-size: $font-xxs;
+    font-weight: $font-weight-regular;
+    color: $color-brand-blue;
+    text-decoration: none;
+    margin-bottom: $spacing-md;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    gap: $spacing-md;
+    align-items: center;
+  }
+
+  &__quantity {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid $color-neutral-gray-200;
+    border-radius: $border-radius-sm;
+    padding: 0 $spacing-xs;
+    width: 110px;
+    height: 36px;
+
+    @include mobile {
+      width: 90px;
+    }
+  }
+
+  &__quantity-btn {
+    background: none;
+    border: none;
+    font-size: $font-md;
+    color: $color-brand-purple;
+    cursor: pointer;
+    padding: 0 $spacing-xs;
+
+    @include mobile {
+      font-size: $font-sm;
+    }
+  }
+
+  &__quantity-btn--disabled {
+    color: $color-neutral-gray-600;
+    font-size: $font-md;
+    cursor: not-allowed;
+
+    @include mobile {
+      font-size: $font-sm;
+    }
+  }
+
+  &__quantity-value {
+    font-family: $font-family-primary;
+    font-size: $font-sm;
+    font-weight: $font-weight-regular;
+    color: $color-brand-purple;
+
+    @include mobile {
+      font-size: $font-xs;
+    }
+  }
+
+  &__buy-btn {
+    @include button-base;
+    flex: 1;
+    background-color: $color-brand-yellow;
+    border-radius: $border-radius-sm;
+    height: $spacing-2xl;
+    color: $color-brand-purple;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+  }
+
+  &__close:hover {
+    color: $color-neutral-red;
+  }
+}

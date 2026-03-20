@@ -1,0 +1,176 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.header {
+  font-family: $font-family-primary;
+  border-bottom: 1px solid $color-neutral-gray-200;
+
+  &__container,
+  &__top-bar,
+  &__nav-bar {
+    @include container;
+  }
+
+  &__top-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9rem;
+    padding: $spacing-xs 0;
+    border-bottom: 1px solid $color-neutral-gray-200;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__top-item {
+    font-size: $font-xs;
+    display: flex;
+    align-items: center;
+    gap: $spacing-xs;
+    color: $color-neutral-gray-600;
+  }
+
+  &__top-item--highlight {
+    color: $color-brand-blue;
+  }
+
+  &__main-bar {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: $spacing-md 0;
+    border-bottom: 1px solid $color-neutral-gray-200;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: $spacing-4xl;
+
+    @include tablet {
+      grid-template-columns: auto 1fr;
+      gap: $spacing-lg;
+    }
+
+    @include mobile {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: $spacing-sm;
+    }
+  }
+
+  &__logo {
+    img {
+      height: 40px;
+    }
+  }
+
+  &__search {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    background-color: $color-neutral-gray-100;
+    border-radius: $border-radius-md;
+    padding: 0 $spacing-md;
+    height: $spacing-3xl;
+    min-width: 630px;
+
+    @include tablet {
+      padding: 0 $spacing-sm;
+      max-width: 80%;
+    }
+
+    @include mobile {
+      min-width: 100%;
+      order: 3;
+      margin-top: $spacing-sm;
+    }
+
+    input {
+      flex: 1;
+      border: none;
+      background: transparent;
+      font-size: $font-sm;
+      color: $color-brand-purple;
+      outline: none;
+
+      &::placeholder {
+        color: $color-neutral-gray-500;
+      }
+    }
+
+    button {
+      @include flex-center;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: $spacing-lg;
+
+    @include mobile {
+      gap: $spacing-sm;
+    }
+  }
+
+  &__icon-btn {
+    @include button-base;
+    @include flex-center;
+    background: none;
+  }
+
+  &__nav-bar {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: $spacing-sm 0;
+    box-shadow: $shadow-navbar;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    @include tablet {
+      justify-content: flex-start;
+      gap: $spacing-lg;
+      padding: 0 $spacing-md;
+      width: max-content;
+    }
+  }
+
+  &__nav-item {
+    a {
+      text-decoration: none;
+      font-size: $font-xs;
+      color: $color-neutral-gray-500;
+      font-weight: $font-weight-semi-bold;
+      display: flex;
+      align-items: center;
+      gap: $spacing-xs;
+
+      &:hover {
+        color: $color-brand-blue;
+      }
+    }
+
+    &--active a {
+      color: $color-brand-blue;
+    }
+  }
+}

@@ -1,0 +1,80 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.categories {
+  font-family: $font-family-primary;
+  padding: $spacing-2xl 0;
+  margin-bottom: $spacing-lg;
+
+  @include mobile {
+    padding: $spacing-lg 0;
+    margin-bottom: 0;
+  }
+
+  &__container {
+    @include container;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow-x: auto;
+
+    @include mobile {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: $spacing-sm;
+    }
+  }
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: $spacing-lg;
+  cursor: pointer;
+
+  @include mobile {
+    gap: $spacing-md;
+  }
+
+  &__box {
+    @include flex-center;
+    width: 128px;
+    height: 128px;
+    background-color: $color-neutral-gray-100;
+    border-radius: $border-radius-md;
+    transition: all 0.3s ease;
+    box-shadow: $shadow-navbar;
+
+    img {
+      width: 61px;
+      height: 61px;
+      object-fit: contain;
+    }
+  }
+
+  &__name {
+    font-size: $font-sm;
+    font-weight: $font-weight-regular;
+    color: $color-neutral-gray-800;
+    transition: color 0.3s ease;
+  }
+
+  &--active {
+    .category__box {
+      background-color: $color-neutral-white;
+      box-shadow: $shadow-text;
+    }
+
+    .category__name {
+      color: $color-brand-blue;
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  &:hover:not(.category--active) {
+    .category__box {
+      background-color: $color-neutral-gray-200;
+    }
+  }
+}

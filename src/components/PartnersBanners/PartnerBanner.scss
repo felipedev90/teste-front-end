@@ -1,0 +1,23 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.partners {
+  padding: $spacing-3xl 0;
+
+  @include mobile {
+    padding: $spacing-lg 0;
+  }
+
+  &__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 $spacing-md;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $spacing-md;
+
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+}

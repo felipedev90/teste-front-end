@@ -1,0 +1,88 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.partner {
+  &__card {
+    font-family: $font-family-primary;
+    border-radius: $border-radius-lg;
+    overflow: hidden;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 350px;
+    display: flex;
+    align-items: flex-end;
+
+    @include mobile {
+      height: 250px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to right,
+        rgb(0 0 0 / 80%) 0%,
+        rgb(0 0 0 / 0%) 70%
+      );
+      z-index: 1;
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    padding: $spacing-xl $spacing-2xl;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $spacing-sm;
+    max-width: 320px;
+
+    @include mobile {
+      max-width: 100%;
+      padding: $spacing-md;
+    }
+  }
+
+  &__title {
+    color: $color-neutral-white;
+    font-size: $font-2xl;
+    font-weight: $font-weight-bold;
+    margin: 0;
+
+    @include mobile {
+      font-size: $font-xl;
+    }
+  }
+
+  &__description {
+    color: $color-neutral-white;
+    font-size: $font-sm;
+    line-height: 1.5;
+    margin: 0;
+    padding-bottom: $spacing-md;
+
+    @include mobile {
+      font-size: $font-xs;
+    }
+  }
+
+  &__button {
+    @include button-base;
+    background-color: $color-brand-yellow;
+    color: $color-neutral-gray-900;
+    font-weight: $font-weight-bold;
+    font-size: $font-sm;
+    letter-spacing: 1px;
+    border-radius: $border-radius-sm;
+    padding: $spacing-md $spacing-2xl;
+    text-transform: uppercase;
+
+    @include mobile {
+      padding: $spacing-sm $spacing-lg;
+    }
+  }
+}

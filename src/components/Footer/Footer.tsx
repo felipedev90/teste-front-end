@@ -10,19 +10,25 @@ export default function Footer() {
       <div className="footer__main">
         <div className="footer__container">
           <div className="footer__company">
-            <img src={Logo} alt="Econverse Logo" className="footer__logo" />
+            <img
+              src={Logo}
+              alt="Econverse Logo"
+              className="footer__logo"
+              width={160}
+              height={40}
+            />
             <p className="footer__description">
               Nós somos a Econverse, conectando pessoas e ideias.
             </p>
             <div className="footer__socials">
               <a href="#" aria-label="Instagram">
-                <img src={Instagram} alt="Instagram" />
+                <img src={Instagram} alt="Instagram" width={24} height={24} />
               </a>
               <a href="#" aria-label="Facebook">
-                <img src={Facebook} alt="Facebook" />
+                <img src={Facebook} alt="Facebook" width={24} height={24} />
               </a>
               <a href="#" aria-label="LinkedIn">
-                <img src={Linkedin} alt="LinkedIn" />
+                <img src={Linkedin} alt="LinkedIn" width={24} height={24} />
               </a>
             </div>
           </div>

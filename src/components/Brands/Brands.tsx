@@ -11,7 +11,7 @@ export default function Brands() {
         <div className="brands__list">
           {brands.map((_, index) => (
             <div key={index} className="brands__item">
-              <img src={Logo} alt="Marca parceira" />
+              <img src={Logo} alt="Marca parceira" width={160} height={40} />
             </div>
           ))}
         </div>

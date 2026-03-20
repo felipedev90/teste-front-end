@@ -24,6 +24,8 @@ export default function ProductModal({ product, onClose }: ProductModalProps) {
               className="modal__image"
               src={product.photo}
               alt={product.productName}
+              width={247}
+              height={192}
             />
           </div>
 

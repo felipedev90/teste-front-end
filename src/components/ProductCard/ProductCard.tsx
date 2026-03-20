@@ -20,6 +20,8 @@ export default function ProductCard({
         <img
           src={product.photo}
           alt={product.productName}
+          width={278}
+          height={228}
           className="product-card__image"
         />
       </div>

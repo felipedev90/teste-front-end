@@ -19,31 +19,33 @@ export default function App() {
   return (
     <>
       <Header />
-      <HeroBanner />
-      <Categories />
+      <main>
+        <HeroBanner />
+        <Categories />
 
-      {isLoading && <p>Carregando produtos...</p>}
-      {hasError && <p>Não foi possível carregar os produtos. Tente novamente mais tarde.</p>}
+        {isLoading && <p>Carregando produtos...</p>}
+        {hasError && <p>Não foi possível carregar os produtos. Tente novamente mais tarde.</p>}
 
-      {!isLoading && !hasError && (
-        <>
-          <ProductShowcase
-            products={products}
-            tabs={PRODUCT_TABS}
-            onSetProduct={setSelectedProduct}
-          />
-          <PartnersBanners />
-          <ProductShowcase products={products} onSetProduct={setSelectedProduct} />
-          <PartnersBanners />
-          <Brands />
-          <ProductShowcase products={products} onSetProduct={setSelectedProduct} />
-          {selectedProduct && (
-            <ProductModal product={selectedProduct} onClose={() => setSelectedProduct(null)} />
-          )}
-        </>
-      )}
+        {!isLoading && !hasError && (
+          <>
+            <ProductShowcase
+              products={products}
+              tabs={PRODUCT_TABS}
+              onSetProduct={setSelectedProduct}
+            />
+            <PartnersBanners />
+            <ProductShowcase products={products} onSetProduct={setSelectedProduct} />
+            <PartnersBanners />
+            <Brands />
+            <ProductShowcase products={products} onSetProduct={setSelectedProduct} />
+            {selectedProduct && (
+              <ProductModal product={selectedProduct} onClose={() => setSelectedProduct(null)} />
+            )}
+          </>
+        )}
 
-      <Newsletter />
+        <Newsletter />
+      </main>
       <Footer />
     </>
   )

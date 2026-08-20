@@ -6,6 +6,7 @@ import HeroBanner from '@/components/HeroBanner/HeroBanner'
 import Categories from '@/components/Categories/Categories'
 import ProductShowcase from '@/components/ProductShowcase/ProductShowcase'
 import ProductModal from '@/components/ProductModal/ProductModal'
+import PartnersBanners from '@/components/PartnersBanners/PartnersBanners'
 
 export default function App() {
   const { products, isLoading, hasError } = useProducts()
@@ -23,6 +24,7 @@ export default function App() {
       {!isLoading && !hasError && (
         <>
           <ProductShowcase products={products} onSetProduct={setSelectedProduct} />
+          <PartnersBanners />
           {selectedProduct && (
             <ProductModal product={selectedProduct} onClose={() => setSelectedProduct(null)} />
           )}

@@ -8,23 +8,23 @@
   border: 1px solid $color-neutral-gray-200;
   border-radius: $border-radius-sm;
   padding: 0 $spacing-xs;
-  width: 110px;
+  width: 90px;
   height: 36px;
 
-  @include mobile {
-    width: 90px;
+  @include desktop {
+    width: 110px;
   }
 
   &__btn {
     background: none;
     border: none;
-    font-size: $font-md;
+    font-size: $font-sm;
     color: $color-brand-purple;
     cursor: pointer;
     padding: 0 $spacing-xs;
 
-    @include mobile {
-      font-size: $font-sm;
+    @include desktop {
+      font-size: $font-md;
     }
 
     &:disabled {
@@ -35,12 +35,12 @@
 
   &__value {
     font-family: $font-family-primary;
-    font-size: $font-sm;
+    font-size: $font-xs;
     font-weight: $font-weight-regular;
     color: $color-brand-purple;
 
-    @include mobile {
-      font-size: $font-xs;
+    @include desktop {
+      font-size: $font-sm;
     }
   }
 }

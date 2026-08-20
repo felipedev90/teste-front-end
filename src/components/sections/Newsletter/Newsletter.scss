@@ -6,21 +6,24 @@
   font-family: $font-family-primary;
   padding: $spacing-xl 0;
   min-height: 162px;
+  margin-top: $spacing-2xl;
 
-  @include tablet {
+  @include desktop {
     padding: $spacing-md 0;
+    display: flex;
   }
 
   &__container {
     @include container;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    gap: $spacing-2xl;
+    gap: $spacing-lg;
 
-    @include tablet {
-      flex-direction: column;
-      gap: $spacing-lg;
+    @include desktop {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: $spacing-2xl;
     }
   }
 
@@ -29,64 +32,65 @@
     width: 50%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
     gap: $spacing-xs;
 
-    @include tablet {
-      width: 100%;
-      text-align: center;
-      align-items: center;
+    @include desktop {
+      width: auto;
+      text-align: left;
+      align-items: flex-start;
     }
   }
 
   &__title {
     color: $color-neutral-white;
-    font-size: $font-lg;
+    font-size: $font-md;
     font-weight: $font-weight-bold;
     margin: 0;
 
-    @include tablet {
-      font-size: $font-md;
+    @include desktop {
+      font-size: $font-lg;
     }
   }
 
   &__description {
     color: $color-neutral-white;
-    font-size: $font-sm;
+    font-size: $font-xs;
     font-weight: $font-weight-light;
     line-height: 1.5;
     margin: 0;
 
-    @include tablet {
-      font-size: $font-xs;
+    @include desktop {
+      font-size: $font-sm;
     }
   }
 
   &__form {
     flex: 1;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: $spacing-sm;
     max-width: 650px;
-
-    @include tablet {
-      width: 100%;
-      flex-wrap: wrap;
-    }
   }
 
   &__inputs {
     display: flex;
+    flex-direction: column;
     gap: $spacing-md;
 
-    @include tablet {
-      flex-direction: column;
+    @include desktop {
+      flex-direction: row;
     }
 
     input {
       flex: 1;
-      padding: $spacing-sm $spacing-md;
+      width: 100%;
+      padding: $spacing-sm;
       border: none;
       border-radius: $border-radius-sm;
+      font-family: $font-family-primary;
       font-size: $font-sm;
       color: $color-neutral-gray-900;
       outline: none;
@@ -100,24 +104,24 @@
         color: $color-neutral-gray-600;
       }
 
-      @include tablet {
-        width: 100%;
-        padding: $spacing-sm;
+      @include desktop {
+        padding: $spacing-sm $spacing-md;
       }
     }
 
     button {
       @include button-base;
+      width: 100%;
       background-color: $color-brand-yellow;
       color: $color-brand-purple;
       font-weight: $font-weight-semi-bold;
       border-radius: $border-radius-sm;
       font-size: $font-sm;
-      padding: 0 $spacing-xl;
+      padding: $spacing-sm;
 
-      @include tablet {
-        width: 100%;
-        padding: $spacing-sm;
+      @include desktop {
+        width: auto;
+        padding: 0 $spacing-xl;
       }
     }
   }

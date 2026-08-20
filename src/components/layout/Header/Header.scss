@@ -5,27 +5,26 @@
   font-family: $font-family-primary;
   border-bottom: 1px solid $color-neutral-gray-200;
 
-  &__container,
   &__top-bar,
   &__nav-bar {
     @include container;
   }
 
   &__top-bar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 9rem;
-    padding: $spacing-xs 0;
-    border-bottom: 1px solid $color-neutral-gray-200;
+    display: none;
 
-    @include tablet {
-      display: none;
+    @include desktop {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 9rem;
+      padding: $spacing-xs 0;
+      border-bottom: 1px solid $color-neutral-gray-200;
     }
   }
 
   &__top-item {
-    font-size: $font-xs;
+    font-size: $font-sm;
     display: flex;
     align-items: center;
     gap: $spacing-xs;
@@ -39,26 +38,24 @@
   &__main-bar {
     max-width: 1280px;
     margin: 0 auto;
-    padding: $spacing-md 0;
+    padding: $spacing-md;
     border-bottom: 1px solid $color-neutral-gray-200;
+
+    @include desktop {
+      padding: $spacing-md 0;
+    }
   }
 
   &__container {
-    display: grid;
-    grid-template-columns: auto 1fr auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     align-items: center;
-    gap: $spacing-4xl;
+    gap: $spacing-sm;
 
-    @include tablet {
-      grid-template-columns: auto 1fr;
-      gap: $spacing-lg;
-    }
-
-    @include mobile {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: $spacing-sm;
+    @include desktop {
+      grid-template-columns: auto 1fr auto;
+      gap: $spacing-4xl;
     }
   }
 
@@ -77,23 +74,23 @@
     border-radius: $border-radius-md;
     padding: 0 $spacing-md;
     height: $spacing-3xl;
-    min-width: 630px;
+    min-width: 100%;
+    order: 3;
+    margin-top: $spacing-sm;
 
-    @include tablet {
+    @include desktop {
+      flex: 0 1 630px;
       padding: 0 $spacing-sm;
-      max-width: 80%;
-    }
-
-    @include mobile {
-      min-width: 100%;
-      order: 3;
-      margin-top: $spacing-sm;
+      min-width: 0;
+      order: 0;
+      margin-top: 0;
     }
 
     input {
       flex: 1;
       border: none;
       background: transparent;
+      font-family: $font-family-primary;
       font-size: $font-sm;
       color: $color-brand-purple;
       outline: none;
@@ -119,10 +116,10 @@
   &__actions {
     display: flex;
     align-items: center;
-    gap: $spacing-lg;
+    gap: $spacing-sm;
 
-    @include mobile {
-      gap: $spacing-sm;
+    @include desktop {
+      gap: $spacing-lg;
     }
   }
 
@@ -133,13 +130,14 @@
   }
 
   &__nav-bar {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: $spacing-sm 0;
-    box-shadow: $shadow-navbar;
+    display: none;
 
-    @include tablet {
-      display: none;
+    @include desktop {
+      display: block;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: $spacing-sm 0;
+      box-shadow: $shadow-navbar;
     }
   }
 
@@ -150,13 +148,6 @@
     list-style: none;
     padding: 0;
     margin: 0;
-
-    @include tablet {
-      justify-content: flex-start;
-      gap: $spacing-lg;
-      padding: 0 $spacing-md;
-      width: max-content;
-    }
   }
 
   &__nav-item {

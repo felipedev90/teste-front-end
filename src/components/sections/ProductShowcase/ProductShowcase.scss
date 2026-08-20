@@ -5,11 +5,11 @@
 .product-showcase {
   max-width: 1280px;
   margin: 0 auto;
-  padding: $spacing-xl $spacing-md;
+  padding: $spacing-sm;
   font-family: $font-family-primary;
 
-  @include mobile {
-    padding: $spacing-sm;
+  @include desktop {
+    padding: $spacing-xl $spacing-md;
   }
 
   &__header {
@@ -19,14 +19,14 @@
 
   &__title {
     @include flex-center;
-    font-size: $font-lg;
+    font-size: $font-md;
     font-weight: $font-weight-bold;
     color: $color-brand-blue;
-    margin-bottom: $spacing-xs;
+    margin-bottom: $spacing-sm;
 
-    @include mobile {
-      font-size: $font-md;
-      margin-bottom: $spacing-sm;
+    @include desktop {
+      font-size: $font-lg;
+      margin-bottom: $spacing-xs;
     }
 
     &::before,
@@ -42,17 +42,18 @@
   }
 
   &__tabs {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     list-style: none;
     text-transform: uppercase;
     border: 0.0625rem solid $color-neutral-gray-300;
+    border-radius: $border-radius-sm;
     overflow: hidden;
 
-    @include mobile {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      border-radius: $border-radius-sm;
+    @include desktop {
+      display: flex;
+      justify-content: center;
+      border-radius: 0;
     }
   }
 
@@ -62,12 +63,12 @@
     font-weight: $font-weight-regular;
     color: $color-neutral-gray-700;
     cursor: pointer;
-    border-right: 0.0625rem solid $color-neutral-gray-300;
     flex: 1;
     text-align: center;
+    border-right: none;
 
-    @include mobile {
-      border-right: none;
+    @include desktop {
+      border-right: 0.0625rem solid $color-neutral-gray-300;
     }
 
     &:last-child {
@@ -95,13 +96,14 @@
   &__grid {
     display: flex;
     align-items: center;
-    position: relative;
+    gap: $spacing-sm;
   }
 
   &__product-list {
+    flex: 1;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr;
     gap: $spacing-md;
     padding: $spacing-md 0;
 
@@ -109,8 +111,8 @@
       grid-template-columns: repeat(2, 1fr);
     }
 
-    @include mobile {
-      grid-template-columns: 1fr;
+    @include desktop {
+      grid-template-columns: repeat(4, 1fr);
     }
 
     &::-webkit-scrollbar {
@@ -119,6 +121,8 @@
   }
 
   &__arrow {
+    display: none;
+    flex-shrink: 0;
     font-size: $font-md;
     background: $color-neutral-white;
     border: none;
@@ -126,25 +130,14 @@
     border-radius: 50%;
     width: 35px;
     height: 35px;
-    display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    position: absolute;
-    z-index: 10;
     color: $color-neutral-gray-900;
     font-weight: $font-weight-light;
 
-    &--prev {
-      left: -40px;
-    }
-
-    &--next {
-      right: -40px;
-    }
-
-    @include mobile {
-      display: none;
+    @include desktop {
+      display: flex;
     }
   }
 }

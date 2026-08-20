@@ -3,6 +3,7 @@ import type { Product } from '@/types/Product'
 import { useProducts } from '@/hooks/useProducts'
 import Header from '@/components/Header/Header'
 import HeroBanner from '@/components/HeroBanner/HeroBanner'
+import Categories from '@/components/Categories/Categories'
 import ProductShowcase from '@/components/ProductShowcase/ProductShowcase'
 import ProductModal from '@/components/ProductModal/ProductModal'
 
@@ -14,6 +15,7 @@ export default function App() {
     <>
       <Header />
       <HeroBanner />
+      <Categories />
 
       {isLoading && <p>Carregando produtos...</p>}
       {hasError && <p>Não foi possível carregar os produtos. Tente novamente mais tarde.</p>}

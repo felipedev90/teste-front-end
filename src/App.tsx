@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
-import type { Product } from './types/Product'
-import fetchProducts from './services/productFetch'
+import type { Product } from '@/types/Product'
+import fetchProducts from '@/services/productFetch'
+import ProductShowcase from '@/components/ProductShowcase/ProductShowcase'
 
 export default function App() {
   const [products, setProducts] = useState<Product[]>([])
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars -- usado pelo ProductCard a partir da Branch 2
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null)
   const [isLoading, setIsLoading] = useState(true)
   const [hasError, setHasError] = useState(false)
@@ -39,12 +39,12 @@ export default function App() {
   }
 
   if (hasError) {
-    return <p>Não foi possível carregar os produtos. Tente novamente.</p>
+    return <p>Não foi possível carregar os produtos. Tente novamente mais tarde.</p>
   }
 
   return (
     <>
-      <p>{products.length} produtos carregados</p>
+      <ProductShowcase products={products} onSetProduct={setSelectedProduct} />
       {selectedProduct && <p>Selecionado: {selectedProduct.productName}</p>}
     </>
   )

@@ -1,5 +1,5 @@
-import type { Product, ProductApiResponse } from '../types/Product'
-import { slugify } from '../utils/utils'
+import type { Product, ProductApiResponse } from '@/types/Product'
+import { slugify } from '@/utils/utils'
 
 const API_URL = '/api/teste-front-end/junior/tecnologia/lista-produtos/produtos.json'
 

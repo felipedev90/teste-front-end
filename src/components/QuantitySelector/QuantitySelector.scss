@@ -1,0 +1,46 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.quantity-selector {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid $color-neutral-gray-200;
+  border-radius: $border-radius-sm;
+  padding: 0 $spacing-xs;
+  width: 110px;
+  height: 36px;
+
+  @include mobile {
+    width: 90px;
+  }
+
+  &__btn {
+    background: none;
+    border: none;
+    font-size: $font-md;
+    color: $color-brand-purple;
+    cursor: pointer;
+    padding: 0 $spacing-xs;
+
+    @include mobile {
+      font-size: $font-sm;
+    }
+
+    &:disabled {
+      color: $color-neutral-gray-600;
+      cursor: not-allowed;
+    }
+  }
+
+  &__value {
+    font-family: $font-family-primary;
+    font-size: $font-sm;
+    font-weight: $font-weight-regular;
+    color: $color-brand-purple;
+
+    @include mobile {
+      font-size: $font-xs;
+    }
+  }
+}

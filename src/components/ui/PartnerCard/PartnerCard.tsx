@@ -10,7 +10,15 @@ type PartnerCardProps = {
 export default function PartnerCard({ title, description, image, buttonText }: PartnerCardProps) {
   return (
     <div className="partner-card">
-      <img className="partner-card__image" src={image} alt="" aria-hidden="true" loading="lazy" />
+      <img
+        className="partner-card__image"
+        src={image}
+        alt=""
+        aria-hidden="true"
+        loading="lazy"
+        width={634}
+        height={350}
+      />
       <div className="partner-card__content">
         <h2 className="partner-card__title">{title}</h2>
         <p className="partner-card__description">{description}</p>

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import type { Product } from '@/types/Product'
 import fetchProducts from '@/services/productFetch'
 import Header from '@/components/Header/Header'
+import HeroBanner from '@/components/HeroBanner/HeroBanner'
 import ProductShowcase from '@/components/ProductShowcase/ProductShowcase'
 import ProductModal from '@/components/ProductModal/ProductModal'
 
@@ -39,6 +40,7 @@ export default function App() {
   return (
     <>
       <Header />
+      <HeroBanner />
 
       {isLoading && <p>Carregando produtos...</p>}
       {hasError && <p>Não foi possível carregar os produtos. Tente novamente mais tarde.</p>}

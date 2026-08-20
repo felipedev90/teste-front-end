@@ -8,6 +8,7 @@ import ProductShowcase from '@/components/ProductShowcase/ProductShowcase'
 import ProductModal from '@/components/ProductModal/ProductModal'
 import PartnersBanners from '@/components/PartnersBanners/PartnersBanners'
 import Brands from '@/components/Brands/Brands'
+import Newsletter from '@/components/Newsletter/Newsletter'
 
 export default function App() {
   const { products, isLoading, hasError } = useProducts()
@@ -26,12 +27,17 @@ export default function App() {
         <>
           <ProductShowcase products={products} onSetProduct={setSelectedProduct} />
           <PartnersBanners />
+          <ProductShowcase products={products} onSetProduct={setSelectedProduct} />
+          <PartnersBanners />
           <Brands />
+          <ProductShowcase products={products} onSetProduct={setSelectedProduct} />
           {selectedProduct && (
             <ProductModal product={selectedProduct} onClose={() => setSelectedProduct(null)} />
           )}
         </>
       )}
+
+      <Newsletter />
     </>
   )
 }

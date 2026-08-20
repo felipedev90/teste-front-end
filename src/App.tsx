@@ -1,46 +1,21 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import type { Product } from '@/types/Product'
-import fetchProducts from '@/services/productFetch'
+import { useProducts } from '@/hooks/useProducts'
 import Header from '@/components/Header/Header'
 import HeroBanner from '@/components/HeroBanner/HeroBanner'
+import Categories from '@/components/Categories/Categories'
 import ProductShowcase from '@/components/ProductShowcase/ProductShowcase'
 import ProductModal from '@/components/ProductModal/ProductModal'
 
 export default function App() {
-  const [products, setProducts] = useState<Product[]>([])
+  const { products, isLoading, hasError } = useProducts()
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null)
-  const [isLoading, setIsLoading] = useState(true)
-  const [hasError, setHasError] = useState(false)
-
-  useEffect(() => {
-    let isStale = false
-
-    async function loadProducts() {
-      const data = await fetchProducts()
-
-      if (isStale) return
-
-      if (data === null) {
-        setHasError(true)
-        setIsLoading(false)
-        return
-      }
-
-      setProducts(data)
-      setIsLoading(false)
-    }
-
-    loadProducts()
-
-    return () => {
-      isStale = true
-    }
-  }, [])
 
   return (
     <>
       <Header />
       <HeroBanner />
+      <Categories />
 
       {isLoading && <p>Carregando produtos...</p>}
       {hasError && <p>Não foi possível carregar os produtos. Tente novamente mais tarde.</p>}

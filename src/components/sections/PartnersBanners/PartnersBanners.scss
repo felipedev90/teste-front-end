@@ -2,10 +2,10 @@
 @use '@/styles/mixins' as *;
 
 .partners {
-  padding: $spacing-3xl 0;
+  padding: $spacing-lg 0;
 
-  @include mobile {
-    padding: $spacing-lg 0;
+  @include tablet {
+    padding: $spacing-3xl 0;
   }
 
   &__container {
@@ -13,11 +13,11 @@
     margin: 0 auto;
     padding: 0 $spacing-md;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: $spacing-md;
 
     @include tablet {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr 1fr;
     }
   }
 }

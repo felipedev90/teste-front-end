@@ -1,10 +1,10 @@
-import ProductCard from '../ProductCard/ProductCard'
+import ProductCard from '@/components/ui/ProductCard/ProductCard'
 import type { Product } from '@/types/Product'
 import './ProductShowcase.scss'
 
 type ProductShowcaseProps = {
   products: Product[]
-  tabs?: string[]
+  tabs?: readonly string[]
   onSetProduct: (product: Product | null) => void
 }
 

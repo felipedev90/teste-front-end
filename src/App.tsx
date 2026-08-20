@@ -1,15 +1,16 @@
 import { useState } from 'react'
 import type { Product } from '@/types/Product'
 import { useProducts } from '@/hooks/useProducts'
-import Header from '@/components/Header/Header'
-import HeroBanner from '@/components/HeroBanner/HeroBanner'
-import Categories from '@/components/Categories/Categories'
-import ProductShowcase from '@/components/ProductShowcase/ProductShowcase'
-import ProductModal from '@/components/ProductModal/ProductModal'
-import PartnersBanners from '@/components/PartnersBanners/PartnersBanners'
-import Brands from '@/components/Brands/Brands'
-import Newsletter from '@/components/Newsletter/Newsletter'
-import Footer from '@/components/Footer/Footer'
+import { PRODUCT_TABS } from '@/data/productTabs'
+import Header from '@/components/layout/Header/Header'
+import Footer from '@/components/layout/Footer/Footer'
+import HeroBanner from '@/components/sections/HeroBanner/HeroBanner'
+import Categories from '@/components/sections/Categories/Categories'
+import ProductShowcase from '@/components/sections/ProductShowcase/ProductShowcase'
+import PartnersBanners from '@/components/sections/PartnersBanners/PartnersBanners'
+import Brands from '@/components/sections/Brands/Brands'
+import Newsletter from '@/components/sections/Newsletter/Newsletter'
+import ProductModal from '@/components/ui/ProductModal/ProductModal'
 
 export default function App() {
   const { products, isLoading, hasError } = useProducts()
@@ -26,7 +27,11 @@ export default function App() {
 
       {!isLoading && !hasError && (
         <>
-          <ProductShowcase products={products} onSetProduct={setSelectedProduct} />
+          <ProductShowcase
+            products={products}
+            tabs={PRODUCT_TABS}
+            onSetProduct={setSelectedProduct}
+          />
           <PartnersBanners />
           <ProductShowcase products={products} onSetProduct={setSelectedProduct} />
           <PartnersBanners />

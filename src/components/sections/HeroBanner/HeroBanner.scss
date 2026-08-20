@@ -44,12 +44,12 @@
   &__title {
     color: $color-neutral-white;
     font-family: $font-family-primary;
-    font-size: $font-3xl;
+    font-size: $font-2xl;
     font-weight: $font-weight-semi-bold;
     line-height: 1.2;
 
-    @include mobile {
-      font-size: $font-2xl;
+    @include tablet {
+      font-size: $font-3xl;
     }
   }
 

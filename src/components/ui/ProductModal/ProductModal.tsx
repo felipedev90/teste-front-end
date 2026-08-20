@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { formatPrice } from '@/utils/utils'
 import type { Product } from '@/types/Product'
-import QuantitySelector from '@/components/QuantitySelector/QuantitySelector'
+import QuantitySelector from '@/components/ui/QuantitySelector/QuantitySelector'
 import './ProductModal.scss'
 
 type ProductModalProps = {

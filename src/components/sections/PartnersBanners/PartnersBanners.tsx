@@ -1,4 +1,4 @@
-import PartnerCard from '../PartnerCard/PartnerCard'
+import PartnerCard from '@/components/ui/PartnerCard/PartnerCard'
 import { PARTNERS } from '@/data/partners'
 import './PartnersBanners.scss'
 

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import type { Product } from '@/types/Product'
 import fetchProducts from '@/services/productFetch'
 import ProductShowcase from '@/components/ProductShowcase/ProductShowcase'
+import ProductModal from '@/components/ProductModal/ProductModal'
 
 export default function App() {
   const [products, setProducts] = useState<Product[]>([])
@@ -45,7 +46,9 @@ export default function App() {
   return (
     <>
       <ProductShowcase products={products} onSetProduct={setSelectedProduct} />
-      {selectedProduct && <p>Selecionado: {selectedProduct.productName}</p>}
+      {selectedProduct && (
+        <ProductModal product={selectedProduct} onClose={() => setSelectedProduct(null)} />
+      )}
     </>
   )
 }

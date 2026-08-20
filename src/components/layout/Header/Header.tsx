@@ -1,13 +1,10 @@
 import './Header.scss'
-import { NAV_ITEMS } from '@/data/header'
+import { NAV_ITEMS, HEADER_ACTIONS } from '@/data/header'
 import Logo from '@/assets/icons/Logo.svg'
 import Truck from '@/assets/icons/Truck.svg'
-import Group from '@/assets/icons/Group.svg'
-import Heart from '@/assets/icons/Heart.svg'
-import UserCircle from '@/assets/icons/UserCircle.svg'
+
 import CreditCard from '@/assets/icons/CreditCard.svg'
 import ShieldCheck from '@/assets/icons/ShieldCheck.svg'
-import ShoppingCart from '@/assets/icons/ShoppingCart.svg'
 import MagnifyingGlass from '@/assets/icons/MagnifyingGlass.svg'
 
 export default function Header() {
@@ -53,18 +50,11 @@ export default function Header() {
           </div>
 
           <div className="header__actions">
-            <button className="header__icon-btn" aria-label="Meus Pedidos">
-              <img src={Group} alt="" aria-hidden="true" width={24} height={24} />
-            </button>
-            <button className="header__icon-btn" aria-label="Favoritos">
-              <img src={Heart} alt="" aria-hidden="true" width={24} height={24} />
-            </button>
-            <button className="header__icon-btn" aria-label="Perfil">
-              <img src={UserCircle} alt="" aria-hidden="true" width={24} height={24} />
-            </button>
-            <button className="header__icon-btn" aria-label="Carrinho">
-              <img src={ShoppingCart} alt="" aria-hidden="true" width={24} height={24} />
-            </button>
+            {HEADER_ACTIONS.map((action) => (
+              <button key={action.label} className="header__icon-btn" aria-label={action.label}>
+                <img src={action.icon} alt="" aria-hidden="true" width={28} height={28} />
+              </button>
+            ))}
           </div>
         </div>
       </div>

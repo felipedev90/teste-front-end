@@ -9,6 +9,7 @@ import ProductModal from '@/components/ProductModal/ProductModal'
 import PartnersBanners from '@/components/PartnersBanners/PartnersBanners'
 import Brands from '@/components/Brands/Brands'
 import Newsletter from '@/components/Newsletter/Newsletter'
+import Footer from '@/components/Footer/Footer'
 
 export default function App() {
   const { products, isLoading, hasError } = useProducts()
@@ -38,6 +39,7 @@ export default function App() {
       )}
 
       <Newsletter />
+      <Footer />
     </>
   )
 }

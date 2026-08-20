@@ -1,0 +1,172 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.header {
+  font-family: $font-family-primary;
+  border-bottom: 1px solid $color-neutral-gray-200;
+
+  &__top-bar,
+  &__nav-bar {
+    @include container;
+  }
+
+  &__top-bar {
+    display: none;
+
+    @include desktop {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 9rem;
+      padding: $spacing-xs 0;
+      border-bottom: 1px solid $color-neutral-gray-200;
+    }
+  }
+
+  &__top-item {
+    font-size: $font-sm;
+    display: flex;
+    align-items: center;
+    gap: $spacing-xs;
+    color: $color-neutral-gray-600;
+  }
+
+  &__top-item--highlight {
+    color: $color-brand-blue;
+  }
+
+  &__main-bar {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: $spacing-md;
+    border-bottom: 1px solid $color-neutral-gray-200;
+
+    @include desktop {
+      padding: $spacing-md 0;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: $spacing-sm;
+
+    @include desktop {
+      grid-template-columns: auto 1fr auto;
+      gap: $spacing-4xl;
+    }
+  }
+
+  &__logo {
+    img {
+      height: 40px;
+    }
+  }
+
+  &__search {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    background-color: $color-neutral-gray-100;
+    border-radius: $border-radius-md;
+    padding: 0 $spacing-md;
+    height: $spacing-3xl;
+    min-width: 100%;
+    order: 3;
+    margin-top: $spacing-sm;
+
+    @include desktop {
+      flex: 0 1 630px;
+      padding: 0 $spacing-sm;
+      min-width: 0;
+      order: 0;
+      margin-top: 0;
+    }
+
+    input {
+      flex: 1;
+      border: none;
+      background: transparent;
+      font-family: $font-family-primary;
+      font-size: $font-sm;
+      color: $color-brand-purple;
+      outline: none;
+
+      &:focus-visible {
+        outline: 2px solid $color-brand-blue;
+        outline-offset: 2px;
+      }
+
+      &::placeholder {
+        color: $color-neutral-gray-500;
+      }
+    }
+
+    button {
+      @include flex-center;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+
+    @include desktop {
+      gap: $spacing-lg;
+    }
+  }
+
+  &__icon-btn {
+    @include button-base;
+    @include flex-center;
+    background: none;
+  }
+
+  &__nav-bar {
+    display: none;
+
+    @include desktop {
+      display: block;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: $spacing-sm 0;
+      box-shadow: $shadow-navbar;
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__nav-item {
+    a {
+      text-decoration: none;
+      font-size: $font-xs;
+      color: $color-neutral-gray-500;
+      font-weight: $font-weight-semi-bold;
+      display: flex;
+      align-items: center;
+      gap: $spacing-xs;
+
+      &:hover {
+        color: $color-brand-blue;
+      }
+    }
+
+    &--active a {
+      color: $color-brand-blue;
+    }
+  }
+}

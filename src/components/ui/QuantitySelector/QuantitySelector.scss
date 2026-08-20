@@ -1,0 +1,46 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.quantity-selector {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid $color-neutral-gray-200;
+  border-radius: $border-radius-sm;
+  padding: 0 $spacing-xs;
+  width: 90px;
+  height: 36px;
+
+  @include desktop {
+    width: 110px;
+  }
+
+  &__btn {
+    background: none;
+    border: none;
+    font-size: $font-sm;
+    color: $color-brand-purple;
+    cursor: pointer;
+    padding: 0 $spacing-xs;
+
+    @include desktop {
+      font-size: $font-md;
+    }
+
+    &:disabled {
+      color: $color-neutral-gray-600;
+      cursor: not-allowed;
+    }
+  }
+
+  &__value {
+    font-family: $font-family-primary;
+    font-size: $font-xs;
+    font-weight: $font-weight-regular;
+    color: $color-brand-purple;
+
+    @include desktop {
+      font-size: $font-sm;
+    }
+  }
+}

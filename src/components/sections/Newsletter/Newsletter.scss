@@ -1,0 +1,147 @@
+@use '@/styles/variables' as *;
+@use '@/styles/mixins' as *;
+
+.newsletter {
+  background-color: $color-brand-purple;
+  font-family: $font-family-primary;
+  padding: $spacing-xl 0;
+  min-height: 162px;
+  margin-top: $spacing-2xl;
+
+  @include desktop {
+    padding: $spacing-md 0;
+    display: flex;
+  }
+
+  &__container {
+    @include container;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $spacing-lg;
+
+    @include desktop {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: $spacing-2xl;
+    }
+  }
+
+  &__text {
+    flex: 1;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: $spacing-xs;
+
+    @include desktop {
+      width: auto;
+      text-align: left;
+      align-items: flex-start;
+    }
+  }
+
+  &__title {
+    color: $color-neutral-white;
+    font-size: $font-md;
+    font-weight: $font-weight-bold;
+    margin: 0;
+
+    @include desktop {
+      font-size: $font-lg;
+    }
+  }
+
+  &__description {
+    color: $color-neutral-white;
+    font-size: $font-xs;
+    font-weight: $font-weight-light;
+    line-height: 1.5;
+    margin: 0;
+
+    @include desktop {
+      font-size: $font-sm;
+    }
+  }
+
+  &__form {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-sm;
+    max-width: 650px;
+  }
+
+  &__inputs {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-md;
+
+    @include desktop {
+      flex-direction: row;
+    }
+
+    input {
+      flex: 1;
+      width: 100%;
+      padding: $spacing-sm;
+      border: none;
+      border-radius: $border-radius-sm;
+      font-family: $font-family-primary;
+      font-size: $font-sm;
+      color: $color-neutral-gray-900;
+      outline: none;
+
+      &:focus-visible {
+        outline: 2px solid $color-brand-yellow;
+        outline-offset: 2px;
+      }
+
+      &::placeholder {
+        color: $color-neutral-gray-600;
+      }
+
+      @include desktop {
+        padding: $spacing-sm $spacing-md;
+      }
+    }
+
+    button {
+      @include button-base;
+      width: 100%;
+      background-color: $color-brand-yellow;
+      color: $color-brand-purple;
+      font-weight: $font-weight-semi-bold;
+      border-radius: $border-radius-sm;
+      font-size: $font-sm;
+      padding: $spacing-sm;
+
+      @include desktop {
+        width: auto;
+        padding: 0 $spacing-xl;
+      }
+    }
+  }
+
+  &__checkbox {
+    display: flex;
+    align-items: center;
+    gap: $spacing-sm;
+  }
+
+  input[type='checkbox'] {
+    width: $spacing-md;
+    height: $spacing-md;
+    cursor: pointer;
+  }
+
+  label {
+    color: $color-neutral-white;
+    font-size: $font-sm;
+    font-weight: $font-weight-light;
+    cursor: pointer;
+  }
+}
